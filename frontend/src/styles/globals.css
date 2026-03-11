@@ -1,1 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0d1117;
+  --foreground: #ededed;
+  --accent: #3b82f6;
+  --nexus-gold: #d4af37;
+  --nexus-emerald: #50c878;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* কাস্টম স্ক্রলবার (মোবাইল ও পিসির জন্য প্রিমিয়াম লুক) */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* চ্যাট বাবলের জন্য বিশেষ স্টাইল */
+.chat-bubble-user {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+}
+
+.chat-bubble-ai {
+  background: rgba(33, 38, 45, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* এনিমেশন: মেসেজ আসার সময় হালকা পপ-আপ হবে */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-chat {
+  animation: slideUp 0.3s ease-out forwards;
+}
+
+/* ইনপুট বক্সের জন্য গ্লোয়িং ইফেক্ট */
+.input-focus-glow:focus-within {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  border-color: #3b82f6;
+  transition: all 0.3s ease;
+}
+
+/* লোডিং এনিমেশন (যখন এআই চিন্তা করবে) */
+.dot-typing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #8b949e;
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1.0); }
+}
 
