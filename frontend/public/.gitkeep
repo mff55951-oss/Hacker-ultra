@@ -1,1 +1,6 @@
+# This directory will store static assets like:
+# - Images & Icons (Logo, User Avatar)
+# - Audio files (For Voice AI)
+# - Video files (For Video Call features)
+# Keep this file to ensure the folder is tracked by Git.
 
