@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Admin | Feature Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0b0e14; color: #e6edf3; }
+        .glass { background: rgba(22, 27, 34, 0.8); backdrop-filter: blur(12px); border: 1px solid #30363d; }
+        .code-editor { font-family: 'Fira Code', monospace; background: #010409; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-2xl font-bold text-blue-400">Nexus Feature Manager</h1>
+                <p class="text-sm text-gray-500">ডেভেলপার: MD EYASIN</p>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-sm transition-all">
+                Publish All
+            </button>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="glass p-6 rounded-2xl">
+                <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    নতুন ফিচার তৈরি করুন
+                </h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">ফিচারের নাম</label>
+                        <input type="text" placeholder="যেমন: Calculator Pro" class="w-full bg-[#0d1117] border border-gray-700 rounded-lg p-3 text-sm focus:border-blue-500 outline-none">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">বাটন স্টাইল</label>
+                            <select class="w-full bg-[#0d1117] border border-gray-700 rounded-lg p-3 text-sm focus:border-blue-500 outline-none">
+                                <option value="round">গোল (Round)</option>
+                                <option value="square">চারকোণা (Square)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-gray-400 mb-1">লোকেশন</label>
+                            <select class="w-full bg-[#0d1117] border border-gray-700 rounded-lg p-3 text-sm focus:border-blue-500 outline-none">
+                                <option value="top">উপরে (Top)</option>
+                                <option value="sidebar">সাইডবার</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-gray-400 mb-1">সোর্স কোড (HTML/JS)</label>
+                        <textarea class="code-editor w-full h-64 rounded-lg p-4 text-xs text-emerald-400 border border-gray-800 focus:border-blue-500 outline-none" placeholder="<div>Your Code Here</div>"></textarea>
+                    </div>
+
+                    <button class="w-full bg-emerald-600 hover:bg-emerald-700 py-3 rounded-xl font-bold transition-all mt-4">
+                        ফিচারটি পুশ করুন
+                    </button>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="glass p-6 rounded-2xl h-full border-dashed border-2 border-gray-700">
+                    <h2 class="text-lg font-semibold mb-4 text-gray-400">লাইভ প্রিভিউ</h2>
+                    <div id="preview-area" class="flex items-center justify-center h-64 border border-gray-800 rounded-xl bg-[#010409] text-gray-600">
+                        কোড লিখলে এখানে প্রিভিউ দেখা যাবে...
+                    </div>
+                </div>
+
+                <div class="glass p-6 rounded-2xl">
+                    <h2 class="text-lg font-semibold mb-4">একটিভ ফিচারসমূহ</h2>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center bg-[#161b22] p-3 rounded-lg border border-gray-800">
+                            <span class="text-sm">Default Chat</span>
+                            <span class="text-[10px] bg-blue-900 text-blue-300 px-2 py-1 rounded">System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-12 text-center text-gray-600 text-xs">
+        Nexus OS v2.0 | © 2026 Admin Dashboard
+    </footer>
+</body>
+</html>
 
