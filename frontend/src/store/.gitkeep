@@ -1,1 +1,7 @@
+# This directory will store state management files (Redux, Context API, or Zustand).
+# It will handle:
+# - User authentication state (Is logged in?)
+# - Biometric verification data
+# - AI chat session persistence
+# Keep this file to ensure the store folder is tracked by Git.
 
