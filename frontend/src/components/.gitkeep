@@ -1,1 +1,7 @@
+# This directory will store all the reusable React/Next.js components.
+# Examples: 
+# - Sidebar.js
+# - ChatWindow.js
+# - BiometricButton.js
+# Keeping this file to ensure the components folder is tracked by Git.
 
